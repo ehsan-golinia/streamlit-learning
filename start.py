@@ -18,6 +18,19 @@ run = st.Page(
     icon=":material/smart_display:"
 )
 
+markdown = st.Page(
+    "chapters/api-reference/text/markdown.py", title="st.markdown",
+    icon=":material/dashboard:"
+)
+title = st.Page(
+    "chapters/api-reference/text/title.py", title="st.title",
+    icon=":material/dashboard:"
+)
+latex = st.Page(
+    "chapters/api-reference/text/latex.py", title="st.latex",
+    icon=":material/dashboard:"
+)
+
 write = st.Page(
     "chapters/api-reference/write-magic/write.py", title="st.write",
     icon=":material/dashboard:"
@@ -69,17 +82,33 @@ line_chart = st.Page(
     icon=":material/dashboard:"
 )
 
+columns = st.Page(
+    "chapters/api-reference/layouts/columns.py", title="st.columns",
+    icon=":material/dashboard:"
+)
+
+metric = st.Page(
+    "chapters/api-reference/data/metric.py", title="st.metric",
+    icon=":material/dashboard:"
+)
+
 pg = st.navigation(
     {
         "": [introduction],
         
         "🔶 Start": [install, create, run],
-        
+
+        "🔶 Text": [markdown, title, latex],
+
         "🔶 Write & magic": [write, write_stream, magic],
 
         "🔶 Input widgets": [button, checkbox, radio, rbc, number_input, text_input, link_button],
 
         "🔶 Chart elements": [bar_chart, line_chart],
+
+        "🔶 Layouts": [columns],
+
+        "🔶 Data elements": [metric],
     },
 )
 

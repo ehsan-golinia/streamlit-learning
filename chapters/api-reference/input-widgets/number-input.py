@@ -19,7 +19,7 @@ st.code(code, language="python")
 
 st.markdown(":orange[Output:]")
 
-number = st.number_input("Insert a number")
+number = st.number_input("Insert a number", min_value=0.0, max_value=10.0, step=0.5)
 st.write("The current number is ", number)
 
 st.divider()

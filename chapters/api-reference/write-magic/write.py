@@ -50,6 +50,15 @@ st.write(1234)
 
 st.divider()
 
+code = '''st.write({"key": ["val1", "val2", "val3"]})'''
+st.code(code, language="python")
+
+st.markdown(":orange[Output:]")
+
+st.write({"key": ["val1", "val2", "val3"]})
+
+st.divider()
+
 code = '''st.write(
     pd.DataFrame(
         {

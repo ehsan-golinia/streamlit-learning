@@ -72,6 +72,10 @@ link_button = st.Page(
     "chapters/api-reference/input-widgets/link-button.py", title="st.link_button",
     icon=":material/dashboard:"
 )
+file_uploader = st.Page(
+    "chapters/api-reference/input-widgets/file-uploader.py", title="st.file_uploader",
+    icon=":material/dashboard:"
+)
 
 bar_chart = st.Page(
     "chapters/api-reference/charts/bar-chart.py", title="st.bar_chart",
@@ -102,7 +106,9 @@ pg = st.navigation(
 
         "🔶 Write & magic": [write, write_stream, magic],
 
-        "🔶 Input widgets": [button, checkbox, radio, rbc, number_input, text_input, link_button],
+        "🔶 Input widgets": [
+            button, checkbox, radio, rbc, number_input, text_input, link_button,
+            file_uploader],
 
         "🔶 Chart elements": [bar_chart, line_chart],
 

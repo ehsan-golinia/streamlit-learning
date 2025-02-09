@@ -47,8 +47,25 @@ rbc = st.Page(
     "chapters/api-reference/input-widgets/rbc.py", title="radio, button, checkbox",
     icon=":material/dashboard:"
 )
+number_input = st.Page(
+    "chapters/api-reference/input-widgets/number-input.py", title="st.number_input",
+    icon=":material/dashboard:"
+)
 text_input = st.Page(
     "chapters/api-reference/input-widgets/text-input.py", title="st.text_input",
+    icon=":material/dashboard:"
+)
+link_button = st.Page(
+    "chapters/api-reference/input-widgets/link-button.py", title="st.link_button",
+    icon=":material/dashboard:"
+)
+
+bar_chart = st.Page(
+    "chapters/api-reference/charts/bar-chart.py", title="st.bar_chart",
+    icon=":material/dashboard:"
+)
+line_chart = st.Page(
+    "chapters/api-reference/charts/line-chart.py", title="st.line_chart",
     icon=":material/dashboard:"
 )
 
@@ -60,7 +77,9 @@ pg = st.navigation(
         
         "🔶 Write & magic": [write, write_stream, magic],
 
-        "🔶 Input widgets": [button, checkbox, radio, rbc, text_input],
+        "🔶 Input widgets": [button, checkbox, radio, rbc, number_input, text_input, link_button],
+
+        "🔶 Chart elements": [bar_chart, line_chart],
     },
 )
 

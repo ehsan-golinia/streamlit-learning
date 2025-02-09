@@ -4,7 +4,7 @@ import numpy as np
 import altair as alt
 import matplotlib.pyplot as plt
 
-st.title("🔷 st.checkbox")
+st.title("🔷 st.checkbox()")
 
 st.divider()
 

@@ -4,7 +4,7 @@ import numpy as np
 import altair as alt
 import matplotlib.pyplot as plt
 
-st.title("🔷 st.text_input")
+st.title("🔷 st.text_input()")
 
 st.divider()
 

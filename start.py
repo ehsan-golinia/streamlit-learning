@@ -1,7 +1,5 @@
 import streamlit as st
 
-# st.page_link("introduction.py", label="Home", icon="🏠")
-
 introduction = st.Page(
     "chapters/introduction.py", title="Streamlit", 
     icon="🏠", default=True
@@ -21,7 +19,24 @@ run = st.Page(
 )
 
 write = st.Page(
-    "chapters/components/write.py", title="st.write", 
+    "chapters/api-reference/write-magic/write.py", title="st.write",
+    icon=":material/dashboard:"
+)
+write_stream = st.Page(
+    "chapters/api-reference/write-magic/write_stream.py", title="st.write_stream",
+    icon=":material/dashboard:"
+)
+magic = st.Page(
+    "chapters/api-reference/write-magic/magic.py", title="magic commands",
+    icon=":material/dashboard:"
+)
+
+button = st.Page(
+    "chapters/api-reference/input-widgets/button.py", title="st.button",
+    icon=":material/dashboard:"
+)
+checkbox = st.Page(
+    "chapters/api-reference/input-widgets/checkbox.py", title="st.checkbox",
     icon=":material/dashboard:"
 )
 
@@ -31,7 +46,9 @@ pg = st.navigation(
         
         "🔶 Start": [install, create, run],
         
-        "🔶 Components": [write],
+        "🔶 Write & magic": [write, write_stream, magic],
+
+        "🔶 Input widgets": [button, checkbox],
     },
 )
 

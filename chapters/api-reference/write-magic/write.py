@@ -2,8 +2,16 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import altair as alt
+import matplotlib.pyplot as plt
 
 st.title("🔷 st.write()")
+
+st.divider()
+
+st.write('''
+- Write arguments to the Streamlit app
+- Accepts multiple arguments
+- Supports various data types''')
 
 st.divider()
 
@@ -13,6 +21,23 @@ st.code(code, language="python")
 st.markdown(":orange[Output:]")
 
 st.write("Hello, *World!* :sunglasses:")
+
+st.divider()
+
+code = '''st.write(\'''
+# This is the document title
+
+This is some __markdown__.
+\''')'''
+st.code(code, language=None)
+
+st.markdown(":orange[Output:]")
+
+st.write('''
+# This is the document title
+
+This is some __markdown__.
+''')
 
 st.divider()
 
@@ -102,3 +127,23 @@ c = (
 )
 
 st.write(c)
+
+st.divider()
+
+code = '''import matplotlib.pyplot as plt
+import numpy as np
+
+arr = np.random.normal(1, 1, size=100)
+fig, ax = plt.subplots()
+ax.hist(arr, bins=20)
+
+st.write(fig)'''
+st.code(code, language="python")
+
+st.markdown(":orange[Output:]")
+
+arr = np.random.normal(1, 1, size=100)
+fig, ax = plt.subplots()
+ax.hist(arr, bins=20)
+
+st.write(fig)

@@ -39,6 +39,18 @@ checkbox = st.Page(
     "chapters/api-reference/input-widgets/checkbox.py", title="st.checkbox",
     icon=":material/dashboard:"
 )
+radio = st.Page(
+    "chapters/api-reference/input-widgets/radio.py", title="st.radio",
+    icon=":material/dashboard:"
+)
+rbc = st.Page(
+    "chapters/api-reference/input-widgets/rbc.py", title="radio, button, checkbox",
+    icon=":material/dashboard:"
+)
+text_input = st.Page(
+    "chapters/api-reference/input-widgets/text-input.py", title="st.text_input",
+    icon=":material/dashboard:"
+)
 
 pg = st.navigation(
     {
@@ -48,7 +60,7 @@ pg = st.navigation(
         
         "🔶 Write & magic": [write, write_stream, magic],
 
-        "🔶 Input widgets": [button, checkbox],
+        "🔶 Input widgets": [button, checkbox, radio, rbc, text_input],
     },
 )
 

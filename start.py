@@ -26,6 +26,14 @@ title = st.Page(
     "chapters/api-reference/text/title.py", title="st.title",
     icon=":material/dashboard:"
 )
+header = st.Page(
+    "chapters/api-reference/text/header.py", title="st.header",
+    icon=":material/dashboard:"
+)
+subheader = st.Page(
+    "chapters/api-reference/text/subheader.py", title="st.subheader",
+    icon=":material/dashboard:"
+)
 latex = st.Page(
     "chapters/api-reference/text/latex.py", title="st.latex",
     icon=":material/dashboard:"
@@ -102,7 +110,7 @@ pg = st.navigation(
         
         "🔶 Start": [install, create, run],
 
-        "🔶 Text": [markdown, title, latex],
+        "🔶 Text": [markdown, title, header, subheader, latex],
 
         "🔶 Write & magic": [write, write_stream, magic],
 

@@ -68,6 +68,10 @@ rbc = st.Page(
     "chapters/api-reference/input-widgets/rbc.py", title="radio, button, checkbox",
     icon=":material/dashboard:"
 )
+selectbox = st.Page(
+    "chapters/api-reference/input-widgets/selectbox.py", title="st.selectbox",
+    icon=":material/dashboard:"
+)
 number_input = st.Page(
     "chapters/api-reference/input-widgets/number-input.py", title="st.number_input",
     icon=":material/dashboard:"
@@ -98,6 +102,10 @@ columns = st.Page(
     "chapters/api-reference/layouts/columns.py", title="st.columns",
     icon=":material/dashboard:"
 )
+empty = st.Page(
+    "chapters/api-reference/layouts/empty.py", title="st.empty",
+    icon=":material/dashboard:"
+)
 
 metric = st.Page(
     "chapters/api-reference/data/metric.py", title="st.metric",
@@ -115,12 +123,12 @@ pg = st.navigation(
         "🔶 Write & magic": [write, write_stream, magic],
 
         "🔶 Input widgets": [
-            button, checkbox, radio, rbc, number_input, text_input, link_button,
-            file_uploader],
+            button, checkbox, radio, rbc, selectbox, number_input, text_input,
+            link_button, file_uploader],
 
         "🔶 Chart elements": [bar_chart, line_chart],
 
-        "🔶 Layouts": [columns],
+        "🔶 Layouts": [columns, empty],
 
         "🔶 Data elements": [metric],
     },

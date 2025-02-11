@@ -5,127 +5,58 @@ import altair as alt
 import matplotlib.pyplot as plt
 from vega_datasets import data
 
-st.title("🔷 st.bar_chart()")
+st.title("🔷 st.map")
 
 st.divider()
 
 st.write('''
-- Display a bar chart
+- Display a map with a scatterplot overlaid onto it
 ''')
 
 st.divider()
 
-code = '''import streamlit as st
-import pandas as pd
-import numpy as np
-
-chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
-
-st.bar_chart(chart_data)'''
+code = '''
+df = pd.DataFrame(
+    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
+    columns=["lat", "lon"],
+)
+st.map(df, size=20, color="#0044ff")
+'''
 st.code(code, language="python")
 
 st.markdown(":orange[Output:]")
 
-chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
-
-st.bar_chart(chart_data)
+df = pd.DataFrame(
+    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
+    columns=["lat", "lon"],
+)
+st.map(df, size=20, color="#0044ff")
 
 st.divider()
 
-code = '''import streamlit as st
-import pandas as pd
-import numpy as np
-
-chart_data = pd.DataFrame(
+code = '''
+df = pd.DataFrame(
     {
-        "col1": list(range(20)) * 3,
-        "col2": np.random.randn(60),
-        "col3": ["A"] * 20 + ["B"] * 20 + ["C"] * 20,
+        "col1": np.random.randn(1000) / 50 + 37.76,
+        "col2": np.random.randn(1000) / 50 + -122.4,
+        "col3": np.random.randn(1000) * 100,
+        "col4": np.random.rand(1000, 4).tolist(),
     }
 )
 
-st.bar_chart(chart_data, x="col1", y="col2", color="col3")'''
+st.map(df, latitude="col1", longitude="col2", size="col3", color="col4")
+'''
 st.code(code, language="python")
 
 st.markdown(":orange[Output:]")
 
-chart_data = pd.DataFrame(
+df = pd.DataFrame(
     {
-        "col1": list(range(20)) * 3,
-        "col2": np.random.randn(60),
-        "col3": ["A"] * 20 + ["B"] * 20 + ["C"] * 20,
+        "col1": np.random.randn(1000) / 50 + 37.76,
+        "col2": np.random.randn(1000) / 50 + -122.4,
+        "col3": np.random.randn(1000) * 100,
+        "col4": np.random.rand(1000, 4).tolist(),
     }
 )
 
-st.bar_chart(chart_data, x="col1", y="col2", color="col3")
-
-st.divider()
-
-code = '''import streamlit as st
-import pandas as pd
-import numpy as np
-
-chart_data = pd.DataFrame(
-    {
-        "col1": list(range(20)),
-        "col2": np.random.randn(20),
-        "col3": np.random.randn(20),
-    }
-)
-
-st.bar_chart(
-    chart_data,
-    x="col1",
-    y=["col2", "col3"],
-    color=["#FF0000", "#0000FF"],  # Optional
-)'''
-st.code(code, language="python")
-
-st.markdown(":orange[Output:]")
-
-chart_data = pd.DataFrame(
-    {
-        "col1": list(range(20)),
-        "col2": np.random.randn(20),
-        "col3": np.random.randn(20),
-    }
-)
-
-st.bar_chart(
-    chart_data,
-    x="col1",
-    y=["col2", "col3"],
-    color=["#FF0000", "#0000FF"],  # Optional
-)
-
-st.divider()
-
-code = '''import streamlit as st
-from vega_datasets import data
-
-source = data.barley()
-
-st.bar_chart(source, x="variety", y="yield", color="site", horizontal=True)'''
-st.code(code, language="python")
-
-st.markdown(":orange[Output:]")
-
-source = data.barley()
-
-st.bar_chart(source, x="variety", y="yield", color="site", horizontal=True)
-
-st.divider()
-
-code = '''import streamlit as st
-from vega_datasets import data
-
-source = data.barley()
-
-st.bar_chart(source, x="year", y="yield", color="site", stack=False)'''
-st.code(code, language="python")
-
-st.markdown(":orange[Output:]")
-
-source = data.barley()
-
-st.bar_chart(source, x="year", y="yield", color="site", stack=False)
+st.map(df, latitude="col1", longitude="col2", size="col3", color="col4")

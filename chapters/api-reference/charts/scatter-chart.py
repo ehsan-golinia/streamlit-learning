@@ -5,127 +5,89 @@ import altair as alt
 import matplotlib.pyplot as plt
 from vega_datasets import data
 
-st.title("🔷 st.bar_chart()")
+st.title("🔷 st.scatter_chart()")
 
 st.divider()
 
 st.write('''
-- Display a bar chart
+- Display a scatterplot chart
 ''')
 
 st.divider()
 
-code = '''import streamlit as st
-import pandas as pd
-import numpy as np
+code = '''
+chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+
+st.scatter_chart(chart_data)
+'''
+st.code(code, language="python")
+
+st.markdown(":orange[Output:]")
 
 chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
 
-st.bar_chart(chart_data)'''
-st.code(code, language="python")
-
-st.markdown(":orange[Output:]")
-
-chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
-
-st.bar_chart(chart_data)
+st.scatter_chart(chart_data)
 
 st.divider()
 
-code = '''import streamlit as st
-import pandas as pd
-import numpy as np
-
+code = '''
 chart_data = pd.DataFrame(
-    {
-        "col1": list(range(20)) * 3,
-        "col2": np.random.randn(60),
-        "col3": ["A"] * 20 + ["B"] * 20 + ["C"] * 20,
-    }
+    np.random.randn(20, 3), columns=["col1", "col2", "col3"]
 )
+chart_data["col4"] = np.random.choice(["A", "B", "C"], 20)
 
-st.bar_chart(chart_data, x="col1", y="col2", color="col3")'''
+st.scatter_chart(
+    chart_data,
+    x="col1",
+    y="col2",
+    color="col4",
+    size="col3",
+)
+'''
 st.code(code, language="python")
 
 st.markdown(":orange[Output:]")
 
 chart_data = pd.DataFrame(
-    {
-        "col1": list(range(20)) * 3,
-        "col2": np.random.randn(60),
-        "col3": ["A"] * 20 + ["B"] * 20 + ["C"] * 20,
-    }
+    np.random.randn(20, 3), columns=["col1", "col2", "col3"]
 )
+chart_data["col4"] = np.random.choice(["A", "B", "C"], 20)
 
-st.bar_chart(chart_data, x="col1", y="col2", color="col3")
+st.scatter_chart(
+    chart_data,
+    x="col1",
+    y="col2",
+    color="col4",
+    size="col3",
+)
 
 st.divider()
 
-code = '''import streamlit as st
-import pandas as pd
-import numpy as np
-
+code = '''
 chart_data = pd.DataFrame(
-    {
-        "col1": list(range(20)),
-        "col2": np.random.randn(20),
-        "col3": np.random.randn(20),
-    }
+    np.random.randn(20, 4), columns=["col1", "col2", "col3", "col4"]
 )
 
-st.bar_chart(
+st.scatter_chart(
     chart_data,
     x="col1",
     y=["col2", "col3"],
+    size="col4",
     color=["#FF0000", "#0000FF"],  # Optional
-)'''
+)
+'''
 st.code(code, language="python")
 
 st.markdown(":orange[Output:]")
 
 chart_data = pd.DataFrame(
-    {
-        "col1": list(range(20)),
-        "col2": np.random.randn(20),
-        "col3": np.random.randn(20),
-    }
+    np.random.randn(20, 4), columns=["col1", "col2", "col3", "col4"]
 )
 
-st.bar_chart(
+st.scatter_chart(
     chart_data,
     x="col1",
     y=["col2", "col3"],
+    size="col4",
     color=["#FF0000", "#0000FF"],  # Optional
 )
-
-st.divider()
-
-code = '''import streamlit as st
-from vega_datasets import data
-
-source = data.barley()
-
-st.bar_chart(source, x="variety", y="yield", color="site", horizontal=True)'''
-st.code(code, language="python")
-
-st.markdown(":orange[Output:]")
-
-source = data.barley()
-
-st.bar_chart(source, x="variety", y="yield", color="site", horizontal=True)
-
-st.divider()
-
-code = '''import streamlit as st
-from vega_datasets import data
-
-source = data.barley()
-
-st.bar_chart(source, x="year", y="yield", color="site", stack=False)'''
-st.code(code, language="python")
-
-st.markdown(":orange[Output:]")
-
-source = data.barley()
-
-st.bar_chart(source, x="year", y="yield", color="site", stack=False)

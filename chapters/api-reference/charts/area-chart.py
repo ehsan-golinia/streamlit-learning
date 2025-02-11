@@ -5,7 +5,7 @@ import altair as alt
 import matplotlib.pyplot as plt
 from vega_datasets import data
 
-st.title("🔷 st.bar_chart()")
+st.title("🔷 st.area_chart()")
 
 st.divider()
 

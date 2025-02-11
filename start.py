@@ -18,138 +18,154 @@ run = st.Page(
     icon=":material/smart_display:"
 )
 
-markdown = st.Page(
+st_markdown = st.Page(
     "chapters/api-reference/text/markdown.py", title="st.markdown",
     icon=":material/dashboard:"
 )
-title = st.Page(
+st_title = st.Page(
     "chapters/api-reference/text/title.py", title="st.title",
     icon=":material/dashboard:"
 )
-header = st.Page(
+st_header = st.Page(
     "chapters/api-reference/text/header.py", title="st.header",
     icon=":material/dashboard:"
 )
-subheader = st.Page(
+st_subheader = st.Page(
     "chapters/api-reference/text/subheader.py", title="st.subheader",
     icon=":material/dashboard:"
 )
-caption = st.Page(
+st_caption = st.Page(
     "chapters/api-reference/text/caption.py", title="st.caption",
     icon=":material/dashboard:"
 )
-code = st.Page(
+st_code = st.Page(
     "chapters/api-reference/text/code.py", title="st.code",
     icon=":material/dashboard:"
 )
-latex = st.Page(
+st_latex = st.Page(
     "chapters/api-reference/text/latex.py", title="st.latex",
     icon=":material/dashboard:"
 )
-divider = st.Page(
+st_divider = st.Page(
     "chapters/api-reference/text/divider.py", title="st.divider",
     icon=":material/dashboard:"
 )
 
-write = st.Page(
+st_write = st.Page(
     "chapters/api-reference/write-magic/write.py", title="st.write",
     icon=":material/dashboard:"
 )
-write_stream = st.Page(
+st_write_stream = st.Page(
     "chapters/api-reference/write-magic/write_stream.py", title="st.write_stream",
     icon=":material/dashboard:"
 )
-magic = st.Page(
+st_magic = st.Page(
     "chapters/api-reference/write-magic/magic.py", title="magic commands",
     icon=":material/dashboard:"
 )
 
-button = st.Page(
+st_button = st.Page(
     "chapters/api-reference/input-widgets/button.py", title="st.button",
     icon=":material/dashboard:"
 )
-checkbox = st.Page(
+st_checkbox = st.Page(
     "chapters/api-reference/input-widgets/checkbox.py", title="st.checkbox",
     icon=":material/dashboard:"
 )
-radio = st.Page(
+st_radio = st.Page(
     "chapters/api-reference/input-widgets/radio.py", title="st.radio",
     icon=":material/dashboard:"
 )
-rbc = st.Page(
+st_rbc = st.Page(
     "chapters/api-reference/input-widgets/rbc.py", title="radio, button, checkbox",
     icon=":material/dashboard:"
 )
-selectbox = st.Page(
+st_selectbox = st.Page(
     "chapters/api-reference/input-widgets/selectbox.py", title="st.selectbox",
     icon=":material/dashboard:"
 )
-number_input = st.Page(
+st_number_input = st.Page(
     "chapters/api-reference/input-widgets/number-input.py", title="st.number_input",
     icon=":material/dashboard:"
 )
-text_input = st.Page(
+st_text_input = st.Page(
     "chapters/api-reference/input-widgets/text-input.py", title="st.text_input",
     icon=":material/dashboard:"
 )
-link_button = st.Page(
+st_link_button = st.Page(
     "chapters/api-reference/input-widgets/link-button.py", title="st.link_button",
     icon=":material/dashboard:"
 )
-file_uploader = st.Page(
+st_file_uploader = st.Page(
     "chapters/api-reference/input-widgets/file-uploader.py", title="st.file_uploader",
     icon=":material/dashboard:"
 )
 
-image = st.Page(
+st_image = st.Page(
     "chapters/api-reference/media/image.py", title="st.image",
     icon=":material/dashboard:"
 )
-logo = st.Page(
+st_logo = st.Page(
     "chapters/api-reference/media/logo.py", title="st.logo",
     icon=":material/dashboard:"
 )
-audio = st.Page(
+st_audio = st.Page(
     "chapters/api-reference/media/audio.py", title="st.audio",
     icon=":material/dashboard:"
 )
-video = st.Page(
+st_video = st.Page(
     "chapters/api-reference/media/video.py", title="st.video",
     icon=":material/dashboard:"
 )
 
-bar_chart = st.Page(
+st_area_chart = st.Page(
+    "chapters/api-reference/charts/area-chart.py", title="st.area_chart",
+    icon=":material/dashboard:"
+)
+st_bar_chart = st.Page(
     "chapters/api-reference/charts/bar-chart.py", title="st.bar_chart",
     icon=":material/dashboard:"
 )
-line_chart = st.Page(
+st_line_chart = st.Page(
     "chapters/api-reference/charts/line-chart.py", title="st.line_chart",
     icon=":material/dashboard:"
 )
+st_scatter_chart = st.Page(
+    "chapters/api-reference/charts/scatter-chart.py", title="st.scatter_chart",
+    icon=":material/dashboard:"
+)
+st_map = st.Page(
+    "chapters/api-reference/charts/map.py", title="st.map",
+    icon=":material/dashboard:"
+)
 
-columns = st.Page(
+st_columns = st.Page(
     "chapters/api-reference/layouts/columns.py", title="st.columns",
     icon=":material/dashboard:"
 )
-empty = st.Page(
+st_empty = st.Page(
     "chapters/api-reference/layouts/empty.py", title="st.empty",
     icon=":material/dashboard:"
 )
 
-dataframe = st.Page(
+st_dataframe = st.Page(
     "chapters/api-reference/data/dataframe.py", title="st.dataframe",
     icon=":material/dashboard:"
 )
-data_editor = st.Page(
+st_data_editor = st.Page(
     "chapters/api-reference/data/data_editor.py", title="st.data_editor",
     icon=":material/dashboard:"
 )
-table = st.Page(
+st_table = st.Page(
     "chapters/api-reference/data/table.py", title="st.table",
     icon=":material/dashboard:"
 )
-metric = st.Page(
+st_metric = st.Page(
     "chapters/api-reference/data/metric.py", title="st.metric",
+    icon=":material/dashboard:"
+)
+st_json = st.Page(
+    "chapters/api-reference/data/json.py", title="st.json",
     icon=":material/dashboard:"
 )
 
@@ -159,21 +175,21 @@ pg = st.navigation(
         
         "🔶 Start": [install, create, run],
 
-        "🔶 Text": [markdown, title, header, subheader, caption, code, latex, divider],
+        "🔶 Text": [st_markdown, st_title, st_header, st_subheader, st_caption, st_code, st_latex, st_divider],
 
-        "🔶 Write & magic": [write, write_stream, magic],
+        "🔶 Write & magic": [st_write, st_write_stream, st_magic],
 
         "🔶 Input widgets": [
-            button, checkbox, radio, rbc, selectbox, number_input, text_input,
-            link_button, file_uploader],
+            st_button, st_checkbox, st_radio, st_rbc, st_selectbox, st_number_input, st_text_input,
+            st_link_button, st_file_uploader],
 
-        "🔶 Media elements": [image, logo, audio, video],
+        "🔶 Media elements": [st_image, st_logo, st_audio, st_video],
 
-        "🔶 Chart elements": [bar_chart, line_chart],
+        "🔶 Chart elements": [st_area_chart, st_bar_chart, st_line_chart, st_scatter_chart, st_map],
 
-        "🔶 Layouts": [columns, empty],
+        "🔶 Layouts": [st_columns, st_empty],
 
-        "🔶 Data elements": [dataframe, data_editor, table, metric],
+        "🔶 Data elements": [st_dataframe, st_data_editor, st_table, st_metric, st_json],
     },
 )
 

@@ -46,6 +46,10 @@ latex = st.Page(
     "chapters/api-reference/text/latex.py", title="st.latex",
     icon=":material/dashboard:"
 )
+divider = st.Page(
+    "chapters/api-reference/text/divider.py", title="st.divider",
+    icon=":material/dashboard:"
+)
 
 write = st.Page(
     "chapters/api-reference/write-magic/write.py", title="st.write",
@@ -136,6 +140,10 @@ metric = st.Page(
     "chapters/api-reference/data/metric.py", title="st.metric",
     icon=":material/dashboard:"
 )
+dataframe = st.Page(
+    "chapters/api-reference/data/dataframe.py", title="st.dataframe",
+    icon=":material/dashboard:"
+)
 
 pg = st.navigation(
     {
@@ -143,7 +151,7 @@ pg = st.navigation(
         
         "🔶 Start": [install, create, run],
 
-        "🔶 Text": [markdown, title, header, subheader, caption, code, latex],
+        "🔶 Text": [markdown, title, header, subheader, caption, code, latex, divider],
 
         "🔶 Write & magic": [write, write_stream, magic],
 
@@ -157,7 +165,7 @@ pg = st.navigation(
 
         "🔶 Layouts": [columns, empty],
 
-        "🔶 Data elements": [metric],
+        "🔶 Data elements": [dataframe, metric],
     },
 )
 

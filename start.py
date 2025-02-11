@@ -1,7 +1,7 @@
 import streamlit as st
 
 introduction = st.Page(
-    "chapters/introduction.py", title="Streamlit", 
+    "chapters/introduction.py", title="Home",
     icon="🏠", default=True
 )
 
@@ -89,6 +89,23 @@ file_uploader = st.Page(
     icon=":material/dashboard:"
 )
 
+image = st.Page(
+    "chapters/api-reference/media/image.py", title="st.image",
+    icon=":material/dashboard:"
+)
+logo = st.Page(
+    "chapters/api-reference/media/logo.py", title="st.logo",
+    icon=":material/dashboard:"
+)
+audio = st.Page(
+    "chapters/api-reference/media/audio.py", title="st.audio",
+    icon=":material/dashboard:"
+)
+video = st.Page(
+    "chapters/api-reference/media/video.py", title="st.video",
+    icon=":material/dashboard:"
+)
+
 bar_chart = st.Page(
     "chapters/api-reference/charts/bar-chart.py", title="st.bar_chart",
     icon=":material/dashboard:"
@@ -125,6 +142,8 @@ pg = st.navigation(
         "🔶 Input widgets": [
             button, checkbox, radio, rbc, selectbox, number_input, text_input,
             link_button, file_uploader],
+
+        "🔶 Media elements": [image, logo, audio, video],
 
         "🔶 Chart elements": [bar_chart, line_chart],
 

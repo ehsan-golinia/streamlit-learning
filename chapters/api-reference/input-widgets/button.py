@@ -13,6 +13,25 @@ st.write('''
 
 st.divider()
 
+code = '''
+btn_1 = st.button("First Button")
+st.write("First = ", btn_1)
+
+btn_2 = st.button("Second Button")
+st.write("Second = ", btn_2)
+'''
+st.code(code, language="python")
+
+st.markdown(":orange[Output:]")
+
+btn_1 = st.button("First Button")
+st.write("First = ", btn_1)
+
+btn_2 = st.button("Second Button")
+st.write("Second = ", btn_2)
+
+st.divider()
+
 code = '''reset_button = st.button("Reset", type="primary")
 st.write("Reset button = ", reset_button)
 

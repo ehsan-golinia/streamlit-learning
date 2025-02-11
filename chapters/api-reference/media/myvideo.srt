@@ -1,22 +1,20 @@
-WEBVTT
-
 1
-00:00:18.700 --> 00:00:21.500
+00:00:18,700 --> 00:00:21,500
 This blade has a dark past.
 
 2
-00:00:22.800 --> 00:00:26.800
+00:00:22,800 --> 00:00:26,800
 It has shed much innocent blood.
 
 3
-00:00:29.000 --> 00:00:32.450
+00:00:29,000 --> 00:00:32,450
 You're a fool for traveling alone,
 so completely unprepared.
 
 4
-00:00:32.750 --> 00:00:35.800
+00:00:32,750 --> 00:00:35,800
 You're lucky your blood's still flowing.
 
 5
-00:00:36.250 --> 00:00:37.300
+00:00:36,250 --> 00:00:37,300
 Thank you.

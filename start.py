@@ -34,6 +34,14 @@ subheader = st.Page(
     "chapters/api-reference/text/subheader.py", title="st.subheader",
     icon=":material/dashboard:"
 )
+caption = st.Page(
+    "chapters/api-reference/text/caption.py", title="st.caption",
+    icon=":material/dashboard:"
+)
+code = st.Page(
+    "chapters/api-reference/text/code.py", title="st.code",
+    icon=":material/dashboard:"
+)
 latex = st.Page(
     "chapters/api-reference/text/latex.py", title="st.latex",
     icon=":material/dashboard:"
@@ -135,7 +143,7 @@ pg = st.navigation(
         
         "🔶 Start": [install, create, run],
 
-        "🔶 Text": [markdown, title, header, subheader, latex],
+        "🔶 Text": [markdown, title, header, subheader, caption, code, latex],
 
         "🔶 Write & magic": [write, write_stream, magic],
 

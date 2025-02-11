@@ -11,7 +11,16 @@ st.divider()
 st.write('''
 - Write arguments to the Streamlit app
 - Accepts multiple arguments
-- Supports various data types''')
+- Supports various data types
+    - string
+    - pandas data frames
+    - array
+    - list, tuple, dictionaries
+    - ML model
+    - matplotlib charts
+    - plotly figures
+    - Altair
+    - Object''')
 
 st.divider()
 
@@ -156,3 +165,14 @@ fig, ax = plt.subplots()
 ax.hist(arr, bins=20)
 
 st.write(fig)
+
+st.divider()
+
+code = '''
+st.write(np.array([1, 2, 3, 4]))
+'''
+st.code(code, language="python")
+
+st.markdown(":orange[Output:]")
+
+st.write(np.array([1, 2, 3, 4]))

@@ -136,12 +136,20 @@ empty = st.Page(
     icon=":material/dashboard:"
 )
 
-metric = st.Page(
-    "chapters/api-reference/data/metric.py", title="st.metric",
-    icon=":material/dashboard:"
-)
 dataframe = st.Page(
     "chapters/api-reference/data/dataframe.py", title="st.dataframe",
+    icon=":material/dashboard:"
+)
+data_editor = st.Page(
+    "chapters/api-reference/data/data_editor.py", title="st.data_editor",
+    icon=":material/dashboard:"
+)
+table = st.Page(
+    "chapters/api-reference/data/table.py", title="st.table",
+    icon=":material/dashboard:"
+)
+metric = st.Page(
+    "chapters/api-reference/data/metric.py", title="st.metric",
     icon=":material/dashboard:"
 )
 
@@ -165,7 +173,7 @@ pg = st.navigation(
 
         "🔶 Layouts": [columns, empty],
 
-        "🔶 Data elements": [dataframe, metric],
+        "🔶 Data elements": [dataframe, data_editor, table, metric],
     },
 )
 

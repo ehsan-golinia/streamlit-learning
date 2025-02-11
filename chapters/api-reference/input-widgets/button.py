@@ -58,16 +58,16 @@ if st.button("Aloha", type="tertiary"):
 
 st.divider()
 
-code = '''left, middle, right = st.columns(3)
-
+code = '''
 if left.button("Plain button", use_container_width=True):
     left.markdown("You clicked the plain button.")
 
-if middle.button("Emoji button", icon="😃", use_container_width=True):
+if middle.button("Emoji button", icon="😃"):
     middle.markdown("You clicked the emoji button.")
 
 if right.button("Material button", icon=":material/mood:", use_container_width=True):
-    right.markdown("You clicked the Material button.")'''
+    right.markdown("You clicked the Material button.")
+'''
 st.code(code, language="python")
 
 st.markdown(":orange[Output:]")

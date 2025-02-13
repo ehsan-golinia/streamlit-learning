@@ -251,6 +251,19 @@ user_form = st.Page(
     icon=":material/dashboard:"
 )
 
+st_context = st.Page(
+    "chapters/api-reference/caching-state/context.py", title="st.context",
+    icon=":material/dashboard:"
+)
+st_session_state = st.Page(
+    "chapters/api-reference/caching-state/session-state.py", title="st.session_state",
+    icon=":material/dashboard:"
+)
+st_query_params = st.Page(
+    "chapters/api-reference/caching-state/query-params.py", title="st.query_params",
+    icon=":material/dashboard:", url_path="query-params?first_key=1&second_key=two&third_key=true"
+)
+
 pg = st.navigation(
     {
         "": [introduction],
@@ -278,6 +291,8 @@ pg = st.navigation(
             st_success, st_info, st_warning, st_error, st_exception],
 
         "🔶 Execution flow": [st_form, st_form_submit_button, user_form],
+
+        "🔶 Caching and state": [st_context, st_session_state, st_query_params],
     },
 )
 

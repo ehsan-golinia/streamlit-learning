@@ -167,8 +167,32 @@ st_columns = st.Page(
     "chapters/api-reference/layouts/columns.py", title="st.columns",
     icon=":material/dashboard:"
 )
+st_container = st.Page(
+    "chapters/api-reference/layouts/container.py", title="st.container",
+    icon=":material/dashboard:"
+)
+st_dialog = st.Page(
+    "chapters/api-reference/layouts/dialog.py", title="st.dialog",
+    icon=":material/dashboard:"
+)
 st_empty = st.Page(
     "chapters/api-reference/layouts/empty.py", title="st.empty",
+    icon=":material/dashboard:"
+)
+st_expander = st.Page(
+    "chapters/api-reference/layouts/expander.py", title="st.expander",
+    icon=":material/dashboard:"
+)
+st_popover = st.Page(
+    "chapters/api-reference/layouts/popover.py", title="st.popover",
+    icon=":material/dashboard:"
+)
+st_sidebar = st.Page(
+    "chapters/api-reference/layouts/sidebar.py", title="st.sidebar",
+    icon=":material/dashboard:"
+)
+st_tabs = st.Page(
+    "chapters/api-reference/layouts/tabs.py", title="st.tabs",
     icon=":material/dashboard:"
 )
 
@@ -263,6 +287,14 @@ st_query_params = st.Page(
     "chapters/api-reference/caching-state/query-params.py", title="st.query_params",
     icon=":material/dashboard:", url_path="query-params?first_key=1&second_key=two&third_key=true"
 )
+example_1 = st.Page(
+    "chapters/api-reference/caching-state/example-1.py", title="example_1",
+    icon=":material/dashboard:"
+)
+example_2 = st.Page(
+    "chapters/api-reference/caching-state/example-2.py", title="example_2",
+    icon=":material/dashboard:"
+)
 
 pg = st.navigation(
     {
@@ -282,7 +314,7 @@ pg = st.navigation(
 
         "🔶 Chart elements": [st_area_chart, st_bar_chart, st_line_chart, st_scatter_chart, st_map, st_pyplot],
 
-        "🔶 Layouts": [st_columns, st_empty],
+        "🔶 Layouts": [st_columns, st_container, st_dialog, st_empty, st_expander, st_popover, st_sidebar, st_tabs],
 
         "🔶 Data elements": [st_dataframe, st_data_editor, st_table, st_metric, st_json],
 
@@ -292,7 +324,7 @@ pg = st.navigation(
 
         "🔶 Execution flow": [st_form, st_form_submit_button, user_form],
 
-        "🔶 Caching and state": [st_context, st_session_state, st_query_params],
+        "🔶 Caching and state": [st_context, st_session_state, st_query_params, example_1, example_2],
     },
 )
 
